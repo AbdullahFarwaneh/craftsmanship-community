@@ -48,44 +48,59 @@ Tables are created automatically on first run.
 
 ### Auth
 
-POST  /api/auth/register     Register a new craftsman
-POST  /api/auth/login        Login and receive JWT token
+| Method | Endpoint              | Description                  | Auth |
+|--------|-----------------------|------------------------------|------|
+| POST   | /api/auth/register    | Register a new craftsman     | ❌   |
+| POST   | /api/auth/login       | Login and receive JWT token  | ❌   |
 
+---
 
 ### Services
 
-GET   /api/services                  Browse all available services (public)
-GET   /api/services/search?q=&city=  Search by name and filter by city (public)
-GET   /api/services/{id}             Get single service (public)
-POST  /api/services                  Add a service 
-GET   /api/services/my               View your own services 
-DELETE /api/services/{id}            Delete a service 
-PATCH /api/services/{id}/status      Toggle available / unavailable 
-POST  /api/services/{id}/media       Upload photo or video 
+| Method | Endpoint                      | Description                            | Auth |
+|--------|-------------------------------|----------------------------------------|------|
+| GET    | /api/services                 | Browse all available services          | ❌   |
+| GET    | /api/services/search?q=&city= | Search by name and filter by city      | ❌   |
+| GET    | /api/services/{id}            | Get single service                     | ❌   |
+| POST   | /api/services                 | Add a new service                      | 🔒   |
+| GET    | /api/services/my              | View your own services                 | 🔒   |
+| DELETE | /api/services/{id}            | Delete a service                       | 🔒   |
+| PATCH  | /api/services/{id}/status     | Toggle available / unavailable         | 🔒   |
+| POST   | /api/services/{id}/media      | Upload photo or video                  | 🔒   |
 
+---
 
 ### Requests
 
-POST  /api/requests                        Submit a service request (public)
-GET   /api/requests/my                     View incoming requests 
-PATCH /api/requests/{id}/status?status=    Accept or reject a request 
+| Method | Endpoint                          | Description                    | Auth |
+|--------|-----------------------------------|--------------------------------|------|
+| POST   | /api/requests                     | Submit a service request       | ❌   |
+| GET    | /api/requests/my                  | View incoming requests         | 🔒   |
+| PATCH  | /api/requests/{id}/status?status= | Accept or reject a request     | 🔒   |
 
+---
 
 ### Reviews
 
-POST  /api/reviews                   Submit a review (public)
-GET   /api/reviews/service/{id}      Get reviews for a service (public)
-GET   /api/reviews/my                Reviews on your services 
+| Method | Endpoint                    | Description                      | Auth |
+|--------|-----------------------------|----------------------------------|------|
+| POST   | /api/reviews                | Submit a review                  | ❌   |
+| GET    | /api/reviews/service/{id}   | Get reviews for a service        | ❌   |
+| GET    | /api/reviews/my             | Reviews on your services         | 🔒   |
 
+---
 
 ### Complaints
 
-POST  /api/complaints                        Submit a complaint (public)
-GET   /api/complaints/my                     View complaints on your services 
-PATCH /api/complaints/{id}/status?status=    Resolve or reject a complaint 
+| Method | Endpoint                              | Description                       | Auth |
+|--------|---------------------------------------|-----------------------------------|------|
+| POST   | /api/complaints                       | Submit a complaint                | ❌   |
+| GET    | /api/complaints/my                    | View complaints on your services  | 🔒   |
+| PATCH  | /api/complaints/{id}/status?status=   | Resolve or reject a complaint     | 🔒   |
 
+---
 
->  = requires `Authorization: Bearer <token>` header
+> 🔒 Requires `Authorization: Bearer <token>` header
 
 ---
 
