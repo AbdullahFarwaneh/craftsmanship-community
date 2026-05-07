@@ -10,7 +10,7 @@ Craftsmen list their services online and receive job requests directly — custo
 |---|---|
 | Language | Java 17 |
 | Framework | Spring Boot 3.2.5 |
-| Database | PostgreSQL |
+| Database | MySQL |
 | Security | Spring Security + JWT |
 | Frontend | React + TypeScript (separate repo) |
 
@@ -25,7 +25,7 @@ CREATE DATABASE craftsmanship_db;
 
 ### 2. Configure application.properties
 ```properties
-spring.datasource.username=postgres
+spring.datasource.username=root
 spring.datasource.password=your_password
 ```
 
