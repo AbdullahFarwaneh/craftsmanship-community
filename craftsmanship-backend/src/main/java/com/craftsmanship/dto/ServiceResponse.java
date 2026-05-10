@@ -9,7 +9,7 @@ public class ServiceResponse {
     private String craftsmanName;
     private String location;        // same as address – frontend uses "location" on card
     private double rating;
-    private int    reviewCount;
+    private int reviewCount;
     private String imageUrl;
     private boolean available;
     private String serviceType;
