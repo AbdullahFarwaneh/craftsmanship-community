@@ -31,6 +31,7 @@ public class Craftsman {
 
     @OneToMany(mappedBy = "craftsman", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude @EqualsAndHashCode.Exclude @Builder.Default
+
     private List<Service> services = new ArrayList<>();
 
     @PrePersist

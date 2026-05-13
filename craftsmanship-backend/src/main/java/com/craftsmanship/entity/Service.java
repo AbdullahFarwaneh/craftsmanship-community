@@ -29,13 +29,13 @@ public class Service {
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    // used as both address and location/city
+
     private String address;
 
     @Builder.Default
     private boolean available = true;
 
-    // stored as comma-separated: "Sat,Sun,Mon"
+
     @Column(name = "available_days")
     private String availableDays;
 
@@ -45,7 +45,7 @@ public class Service {
     @Column(name = "available_time_to")
     private String availableTimeTo;
 
-    // first uploaded image becomes the card image
+
     @Column(name = "image_url")
     private String imageUrl;
 

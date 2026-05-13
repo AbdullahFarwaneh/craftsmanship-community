@@ -27,7 +27,9 @@ public class JwtUtil {
     }
 
     public boolean valid(String token) {
-        try { Jwts.parserBuilder().setSigningKey(key()).build().parseClaimsJws(token); return true; }
+        try { Jwts.parserBuilder().
+                setSigningKey(key()).build().
+                parseClaimsJws(token); return true; }
         catch (Exception e) { return false; }
     }
 }
